@@ -12,6 +12,12 @@ namespace upc {
 
     for (unsigned int l = 0; l < r.size(); ++l) {
   		/// \TODO Compute the autocorrelation r[l]
+
+      /// \DONE Se ha calculado la autocorrelación.
+      /// En este bloque de código, se realiza el cálculo de la autocorrelación mediante el método de autocorrelación directa.
+      /// Se suman los productos cruzados de las muestras de la señal en el dominio del tiempo, retrasadas por un cierto desplazamiento 'l'.
+      /// Posteriormente, se normaliza el resultado dividiendo por el número total de muestras.
+
       r[l]=0;
       for(unsigned int n=l; n< x.size(); n++){
         r[l] += x[n]*x[n-l];
