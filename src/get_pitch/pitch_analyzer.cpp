@@ -146,8 +146,7 @@ bool PitchAnalyzer::unvoiced(float zcr, float r1norm, float rmaxnorm, float pot)
     // Print additional features for analysis (optional)
     // Based on that, implement a rule for unvoiced
     // Uncomment the following block and compile if needed
-  #if 0
-      float pot = 10 * log10(r[0]);
+  #if 1
       if (r[0] > 0.0F)
         cout << pot << '\t' << r[1]/r[0] << '\t' << r[lag]/r[0] << endl;
   #endif
