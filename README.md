@@ -157,7 +157,14 @@ Ejercicios de ampliación
   Entre las posibles mejoras, puede escoger una o más de las siguientes:
 
   * Técnicas de preprocesado: filtrado paso bajo, diezmado, *center clipping*, etc.
+    Se ha implementado un center clipping:
+      - Se calcula el nivel de corte central (Cl) basado en el valor absoluto máximo en la señal de entrada.
+      - Se itera sobre cada trama y se calcula la tasa de cruce por cero (ZCR), que mejora la precisión, para aplicar el corte 		central.
+      - Se realiza el análisis de tono en cada trama preprocesada y se almacenan los valores en el vector f0.
+        
   * Técnicas de postprocesado: filtro de mediana, *dynamic time warping*, etc.
+    Se ha implementado el filtro de mediana para suavizar la estimación y reducir los errores.
+    
   * Métodos alternativos a la autocorrelación: procesado cepstral, *average magnitude difference function*
     (AMDF), etc.
   * Optimización **demostrable** de los parámetros que gobiernan el estimador, en concreto, de los que
